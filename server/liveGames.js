@@ -5,8 +5,8 @@ class LiveGames {
         this.games = [];
     }
     // adds new game to end of games array
-    addGame(pin, hostId, gameLive, gameData){
-        var game = {pin, hostId, gameLive, gameData};
+    addGame(hostId, gameLive, gameData){
+        var game = {hostId, gameLive, gameData};
         this.games.push(game);
         return game;
     }
