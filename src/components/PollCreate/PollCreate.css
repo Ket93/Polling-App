@@ -21,7 +21,7 @@ h1 {
     width: 80%;
 }
 
-.row {
+.row1 {
     font-size: 2em;
     background: #3498db;
     color: #fff;
@@ -37,10 +37,7 @@ h1 {
     font-size: 30px;
 }
 
-.buttonContainer form {
-}
-
-.btn a{
+.btn a {
     display: block;
     height: 100%;
     text-decoration: none;
@@ -54,5 +51,6 @@ h1 {
     justify-content: center;
     width: 80%;
     height: 100%;
-    background-color: #fff;;
+    background-color: #fff;
+    ;
 }
