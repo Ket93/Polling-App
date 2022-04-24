@@ -7,6 +7,16 @@ body {
     position: relative;
 }
 
+.mainTitle {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.football {
+    width: 100px;
+}
+
 .backgroundImage {
     height: 100em;
     object-fit: cover;
@@ -22,6 +32,7 @@ body {
     height: 25em;
     background: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -89,7 +100,7 @@ body {
 }
 
 .pin {
-    margin-top: 12vh;
+    margin-top: 1vh;
     height: 45px;
     width: 250px;
     border: solid grey;

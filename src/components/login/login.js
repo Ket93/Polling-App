@@ -1,5 +1,6 @@
 import React from "react";
 import Background from "../../images/loginbackground.jpg";
+import Football from "../../images/football.png";
 import "./login.css";
 
 const Login = () => {
@@ -8,6 +9,9 @@ const Login = () => {
       <div className="container">
         <img src={Background} alt="" className="backgroundImage" />
         <div className="rectangle">
+          <h2 className="mainTitle">Sports Catalytics</h2>
+          <img src={Football} className="football" alt="" />
+          <img src="" alt="" />
           <input type="text" className="pin" placeholder="Game PIN" />
           <div className="wrapper1">
             <div className="link_wrapper1">
