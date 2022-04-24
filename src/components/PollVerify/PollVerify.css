@@ -1,0 +1,10 @@
+.options {
+    width: 80%;
+    display: inline-block;
+}
+
+.option {
+    position: relative;
+    border: 1px solid #fff;
+    margin: 10px 0px;
+}

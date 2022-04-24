@@ -6,11 +6,19 @@ h1 {
 }
 
 .buttonContainer {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: auto;
+}
+
+.buttonContainer .btn {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
 }
 
 .row {
@@ -25,12 +33,26 @@ h1 {
     justify-content: center;
 }
 
-input {
+.buttonContainer input {
     font-size: 30px;
 }
 
-.form {
-    text-align: center;
+.buttonContainer form {
+}
+
+.btn a{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+.btn {
     display: flex;
+    align-items: center;
     justify-content: center;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;;
 }

@@ -24,9 +24,17 @@ const PollCreate = () => {
     };
 
     
-
+    
     const Submit = (e) => {
         console.log(o1, o2, o3, o4);
+        // this array is used to store the creator's data
+        const arr = {
+            "options": [o1, o2, o3, o4],
+            "correct": -1,
+        }
+        const data = JSON.stringify(arr);
+        console.log(data);
+        // we can't write to a file from here. We'll have to upload this to a database. 
     };
 
     return (
@@ -48,9 +56,9 @@ const PollCreate = () => {
                 <div className='row'>
                     <label><input type="text"  onChange={o4change} /></label>
                 </div>
-                <button type="button" onClick={Submit}>
-                    Submit
-                </button>
+                <div className='btn'>
+                    <a href="/verify" class="button" onClick={Submit}>Submit</a>
+                </div>
             </form>
         </div>
     );

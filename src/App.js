@@ -5,6 +5,7 @@ import Waiting from "./components/waiting/waiting.js";
 import Success from "./components/success/success.js";
 import Wrong from "./components/wrong/wrong.js";
 import PollCreate from "./components/PollCreate/PollCreate.js";
+import PollVerify from "./components/PollVerify/PollVerify.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path='/success' element={<Success />} />
             <Route path='/wrong' element={<Wrong />} />
             <Route path='/pollcreate' element={<PollCreate />} />
+            <Route path='/verify' element={<PollVerify />} />
 
 
           </Routes>
