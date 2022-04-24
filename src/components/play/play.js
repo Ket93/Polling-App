@@ -40,18 +40,6 @@ class Play extends React.Component {
     this.setState({ answers: json["data"]["answers"] });
   }
 
-  async componentWillUnmount() {
-    if (this.state.userAnswer !== -1) {
-      console.log("test");
-      const urlBase = "http://localhost:3301/increment";
-      //const id = "/" + this.props.id + "/";
-      const id = "/6264df6fd4646c90ecafa365/";
-      const index = toString(this.state.userAnswer);
-
-      const response = await fetch(urlBase + id + index, { method: "PUT" });
-    }
-  }
-
   render() {
     return (
       <>
