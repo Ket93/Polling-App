@@ -43,11 +43,12 @@ router.get("/:postId", async (req, res) => {
         status: 200,
         data: post,
       });
+    } else {
+      res.status(400).json({
+        status: 400,
+        message: "No post found",
+      });
     }
-    res.status(400).json({
-      status: 400,
-      message: "No post found",
-    });
   } catch (err) {
     res.status(400).json({
       status: 400,
@@ -71,6 +72,35 @@ router.put("/:postId", async (req, res) => {
       status: 400,
       message: "No post found",
     });
+  } catch (err) {
+    res.status(400).json({
+      status: 400,
+      message: err.message,
+    });
+  }
+});
+
+router.put("/increment/:postId", async (req, res) => {
+  try {
+    let post = await Post.findByIdAndUpdate(
+      req.params.postId,
+      {
+        $inc: { index: 1 },
+      },
+      { new: false }
+    );
+
+    if (post) {
+      res.status(200).json({
+        status: 200,
+        data: post,
+      });
+    } else {
+      res.status(400).json({
+        status: 400,
+        message: "No post found",
+      });
+    }
   } catch (err) {
     res.status(400).json({
       status: 400,
