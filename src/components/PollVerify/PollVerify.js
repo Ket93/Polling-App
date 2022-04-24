@@ -2,11 +2,9 @@ import React from "react";
 import { useState } from "react";
 import Option from "./Option.js"
 
-const PollVerify = () => {
-    const arr = {
-        "options": ["option1", "option2", "option3", "option4"],
-        "correct": -1,
-    }
+const PollVerify = ( {text} ) => {
+    var arr = text;
+    console.log(text);
 
     function onClick(id) {
         // there can only be one right answer

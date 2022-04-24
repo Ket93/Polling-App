@@ -11,10 +11,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
 
 
-
-  function onSubmit(arr) {
-      console.log(arr)
+  var corres = {
+    "options": ["option1", "option2", "option3", "option4"],
+    "correct": -1,
   }
+  function onSubmit(arr) {
+      console.log(arr);
+      corres = arr;
+      console.log(corres);
+  }
+  
+
 
   return (
     <>
@@ -28,7 +35,7 @@ function App() {
             <Route path='/success' element={<Success />} />
             <Route path='/wrong' element={<Wrong />} />
             <Route path='/pollcreate' element={<PollCreate onSubmit={onSubmit}/>} />
-            <Route path='/verify' element={<PollVerify />} />
+            <Route path='/verify' element={<PollVerify text={corres}/>} />
 
 
           </Routes>
