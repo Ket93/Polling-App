@@ -1,10 +1,23 @@
 .options {
+    margin-top: 80px;
     width: 80%;
     display: inline-block;
 }
 
+.title {
+    font-size: 45px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
 .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9vh;
+    cursor: pointer;
     position: relative;
     border: 1px solid #fff;
-    margin: 10px 0px;
+    margin: 70px 0px;
+    background: rgb(93, 166, 250);
 }
