@@ -10,7 +10,7 @@ mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 */
-const port = 3000;
+const port = 3301;
 const config = require("./config");
 
 const indexRouter = require("./routes/index.js");
