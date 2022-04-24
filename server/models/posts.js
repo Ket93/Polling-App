@@ -3,7 +3,6 @@ let Schema = mongoose.Schema;
 
 let postSchema = new Schema(
   {
-    index: Number,
     question: String,
     answers: [String],
     tally: [Number],
