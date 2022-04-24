@@ -28,7 +28,7 @@ const Play = () => {
 class Play extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: {}, answers: [] };
+    this.state = { data: {}, answers: [], userAnswer: -1 };
   }
 
   async componentDidMount() {
@@ -40,23 +40,33 @@ class Play extends React.Component {
     this.setState({ answers: json["data"]["answers"] });
   }
 
-  render() {
-    console.log(this.state.answers[1]);
+  async componentWillUnmount() {
+    if (this.state.userAnswer !== -1) {
+      console.log("test");
+      const urlBase = "http://localhost:3301/increment";
+      //const id = "/" + this.props.id + "/";
+      const id = "/6264df6fd4646c90ecafa365/";
+      const index = toString(this.state.userAnswer);
 
+      const response = await fetch(urlBase + id + index, { method: "PUT" });
+    }
+  }
+
+  render() {
     return (
       <>
         <div className="buttonContainer">
           <h3 className="question">{this.state.data["question"]}</h3>
-          <a class="slide_from_bottom" href="/waiting">
+          <a className="slide_from_bottom" href="/waiting">
             <span>{this.state.answers[0]}</span>
           </a>
-          <a class="slide_from_bottom" href="/waiting">
+          <a className="slide_from_bottom" href="/waiting">
             <span>{this.state.answers[1]}</span>
           </a>
-          <a class="slide_from_bottom" href="/waiting">
+          <a className="slide_from_bottom" href="/waiting">
             <span>{this.state.answers[2]}</span>
           </a>
-          <a class="slide_from_bottom" href="/waiting">
+          <a className="slide_from_bottom" href="/waiting">
             <span>{this.state.answers[3]}</span>
           </a>
         </div>
