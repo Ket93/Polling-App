@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans";
+    line-height: 1.618em;
+    background: #2c3e50;
+}
+
+hr {
+    border: 0;
+    border-bottom: 0.0625rem solid #bbb;
+    margin: 3rem 0;
+}
+
+.question {
+    color: white;
+    font-size: 40px;
+}
+
+.buttonContainer {
+    margin-top: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide_from_bottom {
+    font-size: 2em;
+    background: #3498db;
+    color: #fff;
+    border: 0.25rem solid #3498db;
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 25em;
+}
+
+.slide_from_bottom:hover {
+    color: #3498db;
+}
+
+.slide_from_bottom::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+}
+
+.slide_from_bottom[class^="slide"]::after {
+    transition: all 0.35s;
+}
+
+.slide_from_bottom[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+}
+
+.slide_from_bottom::after {
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+}
+
+.wrapper {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link_wrapper {
+    position: relative;
+}
+
+.submitButton {
+    font-size: 30px;
+    margin-bottom: 30px;
+    display: block;
+    width: 25em;
+    height: 3em;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+    border-radius: 20px;
+    padding-top: 15px;
+}
+
+.submitButton:hover {
+    width: 20em;
+    border: 3px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+}
+
+.submitButton:hover+.icon {
+    border: 3px solid #2ecc71;
+    right: -25%;
+}

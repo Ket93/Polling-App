@@ -10,13 +10,13 @@ body {
 .backgroundImage {
     height: 100em;
     object-fit: cover;
-    object-position: 0 230px;
+    object-position: 0 -230px;
     filter: brightness(50%);
 }
 
 .rectangle {
     position: absolute;
-    bottom: 23em;
+    top: 18em;
     left: 48.5em;
     width: 32em;
     height: 25em;
@@ -38,7 +38,7 @@ body {
     position: relative;
 }
 
-a {
+.submitButton {
     display: block;
     width: 250px;
     height: 50px;
@@ -76,14 +76,14 @@ a {
     transition: all .35s;
 }
 
-a:hover {
+.submitButton:hover {
     width: 200px;
     border: 3px solid #2ecc71;
     background: transparent;
     color: #2ecc71;
 }
 
-a:hover+.icon {
+.submitButton:hover+.icon {
     border: 3px solid #2ecc71;
     right: -25%;
 }
