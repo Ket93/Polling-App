@@ -41,28 +41,30 @@ const PollCreate = ({ onSubmit }) => {
     };
 
     return (
-        <div className='buttonContainer text-center' >
-            <form>
-                <h1>Option 1</h1>
-                <div className='row1'>
-                    <label><input type="text" onChange={o1change} /></label>
-                </div>
-                <h1>Option 2</h1>
-                <div className='row1'>
-                    <label><input type="text" onChange={o2change} /></label>
-                </div>
-                <h1>Option 3</h1>
-                <div className='row1'>
-                    <label><input type="text" onChange={o3change} /></label>
-                </div>
-                <h1>Option 4</h1>
-                <div className='row1'>
-                    <label><input type="text" onChange={o4change} /></label>
-                </div>
-                <div className='btn' onClick={() => Submit(arr)}>
-                    <h1>submit</h1>
-                </div>
-            </form>
+        <div className='pollcontainer' >
+            <div className ='options'>
+                <form>
+                        <h1>Option 1</h1>
+                    <div className='row1'>
+                        <label><input type="text" onChange={o1change} /></label>
+                    </div>
+                        <h1>Option 2</h1>
+                    <div className='row1'>
+                        <label><input type="text" onChange={o2change} /></label>
+                    </div>
+                        <h1>Option 3</h1>
+                    <div className='row1'>
+                        <label><input type="text" onChange={o3change} /></label>
+                    </div>
+                        <h1>Option 4</h1>
+                    <div className='row1'>
+                        <label><input type="text" onChange={o4change} /></label>
+                    </div>
+                    <div className='btn' onClick={() => Submit(arr)}>
+                        <h1>submit</h1>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };
