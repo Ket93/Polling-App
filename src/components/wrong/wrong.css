@@ -29,7 +29,7 @@ body {
     justify-content: center;
     padding-top: 15%;
     padding-bottom: 15%;
-    
+
 }
 
 .container {
@@ -42,7 +42,7 @@ body {
 }
 
 
-.checkmark {
+.checkmark1 {
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -94,7 +94,3 @@ body {
         box-shadow: inset 0px 0px 0px 30px #e21d0e
     }
 }
-  
-  
-  
-  
