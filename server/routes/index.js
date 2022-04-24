@@ -5,7 +5,9 @@ const router = express.Router();
 router.post("/", async (req, res) => {
   try {
     let post = new Post(req.body);
+
     post = await post.save();
+
     res.status(200).json({
       status: 200,
       data: post,
@@ -80,15 +82,22 @@ router.put("/:postId", async (req, res) => {
   }
 });
 
-router.put("/increment/:postId", async (req, res) => {
+router.put("/increment/:postId/:index", async (req, res) => {
   try {
+    let indexNum = parseInt(req.params.index);
+    var queryString = "tally." + req.params.index;
+    console.log(queryString);
     let post = await Post.findByIdAndUpdate(
       req.params.postId,
       {
-        $inc: { index: 1 },
+        $inc: {
+          ["tally." + req.params.index]: 1,
+        },
       },
-      { new: false }
+      { new: true }
     );
+
+    //let post = await Post.findById(req.params.postId);
 
     if (post) {
       res.status(200).json({

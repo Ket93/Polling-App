@@ -5,7 +5,8 @@ let postSchema = new Schema(
   {
     index: Number,
     question: String,
-    options: [String],
+    answers: [String],
+    tally: [Number],
     correct: String,
   },
   { timestamps: true }
